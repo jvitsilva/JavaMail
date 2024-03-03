@@ -24,3 +24,11 @@ Esse código em Java demonstra como enviar um e-mail utilizando a biblioteca Jav
    - Se ocorrer algum erro durante o envio, uma exceção MessagingException é lançada.
 
 ***Lembre-se de que, para usar esse código, você precisa ter uma conta no Gmail e permitir o acesso de aplicativos menos seguros nas configurações da sua conta***
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jvitsilva/JavaMail/main/Images/Captura%20de%20tela%202024-03-03%20155426.png">  
+</p>
+
+<p align="center">
+  <img src="https://github.com/jvitsilva/JavaMail/blob/main/Images/Captura%20de%20tela%202024-03-03%20155439.png?raw=true">  
+</p>
