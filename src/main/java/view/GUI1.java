@@ -127,26 +127,6 @@ public class GUI1 {
 		passwordField.setBorder(null);
 		passwordField.setFont(new Font("Calibri", Font.PLAIN, 15));
 		passwordField.setHorizontalAlignment(SwingConstants.LEFT);
-		
-
-		// Exibicão da senha
-		JCheckBox exibirSenha = new JCheckBox("Mostrar");
-		exibirSenha.setOpaque(false);
-		exibirSenha.setBackground(new Color(192, 192, 192));
-		exibirSenha.setFont(new Font("Tahoma", Font.BOLD, 11));
-		
-		exibirSenha.addMouseListener((MouseListener) new MouseAdapter() {
-		@Override
-		public void mouseClicked(MouseEvent arg0) {
-		if (exibirSenha.isSelected()) {
-		passwordField.setEchoChar((char) 0);
-		} else {
-		passwordField.setEchoChar('*');
-		}
-		}
-		});
-		exibirSenha.setBounds(374, 323, 71, 23);
-		frame.getContentPane().add(exibirSenha);
 				
 		
 		
@@ -181,6 +161,26 @@ public class GUI1 {
 		label2.setHorizontalTextPosition(SwingConstants.CENTER);
 		label2.setHorizontalAlignment(SwingConstants.CENTER);
 		label2.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		
+
+		// Exibicão da senha
+		JCheckBox exibirSenha = new JCheckBox("Mostrar");
+		exibirSenha.setBounds(339, 265, 71, 23);
+		panel.add(exibirSenha);
+		exibirSenha.setOpaque(false);
+		exibirSenha.setBackground(new Color(192, 192, 192));
+		exibirSenha.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		exibirSenha.addMouseListener((MouseListener) new MouseAdapter() {
+		@Override
+		public void mouseClicked(MouseEvent arg0) {
+		if (exibirSenha.isSelected()) {
+		passwordField.setEchoChar((char) 0);
+		} else {
+		passwordField.setEchoChar('*');
+		}
+		}
+		});
 		
 		
 		
