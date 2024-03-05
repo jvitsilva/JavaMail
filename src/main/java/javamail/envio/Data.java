@@ -18,10 +18,10 @@ public class Data {
         this.emailContent = emailContent;
     }
     
-    /*private String user = "enviaemailtestejava@gmail.com"; //email
-    private String password = "clfc mpfl yxcs qtmr";
-    private String recipientList = "vitsilva900@gmail.com"; //lista de destinatários
-    private String sender = "Vitor"; //quem está enviando, remetente
+    /*private String user = "seuemail@gmail.com"; //email
+    private String password = "";
+    private String recipientList = "primeiro@gmail.com, segundo@gmail.com"; //lista de destinatários
+    private String sender = ""; //quem está enviando, remetente
     private String emailSubject = "Projeto JavaMail"; //Título do email, assunto do email
     private String emailContent = "Ola programador, voce acaba de receber um email enviado de um projeto de envio de emails desenvolvido por Joao Vitor"; // conteúdo do email
     */
