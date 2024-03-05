@@ -213,7 +213,7 @@ public class GUI2 {
         stringBuilderTextoEmail.append("Se você está lendo isto, quer dizer que o projeto está funcionando normalmente <br><br/>");
         stringBuilderTextoEmail.append("Aperte no botão abaixo, você será redirecionado para um site com uma imagem aleatória <br><br/>");
 
-        stringBuilderTextoEmail.append("<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=c4rfVjwsez4\" style=\"color:#000000; padding: 14px 25px; text-align: center; text-decoration: none; display: inline-block; border-radius:30px; font-size: 20px; font-family: courier; border: 3px blue; background-color:#CCCCCC;\" >Clique aqui</a><br><br/>");
+        stringBuilderTextoEmail.append("<a target=\"_blank\" href=\"https://source.unsplash.com/random\" style=\"color:#000000; padding: 14px 25px; text-align: center; text-decoration: none; display: inline-block; border-radius:30px; font-size: 20px; font-family: courier; border: 3px blue; background-color:#CCCCCC;\" >Clique aqui</a><br><br/>");
         
         stringBuilderTextoEmail.append("<span style=\"font-size:5px\">Projeto feito por João Vitor Silva.</span>");
         return stringBuilderTextoEmail.toString();
