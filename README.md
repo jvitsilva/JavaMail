@@ -21,3 +21,6 @@ O objetivo deste projeto é permitir que os usuários enviem e-mails através de
 <p display="inline-block">
   <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Eclipse-Luna-Logo.svg" alt="vs-logo"/>
 </p>
+
+### Referências
+[Acesse a wiki para saber mais!](https://github.com/jvitsilva/JavaMail/wiki)
