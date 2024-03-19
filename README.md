@@ -1,34 +1,23 @@
-# JavaMail
-**Projeto destinado ao envio de e-mails através do Java com sua biblioteca nativa de interface gráfica de usuário (GUI)  e a api JavaMail**
+<h1 align="center">JavaMail</h1>
 
-Esse código em Java demonstra como enviar um e-mail utilizando a biblioteca JavaMail. Vou explicar o que cada parte faz:
+##  Sobre este projeto
 
-1. Configuração do Servidor SMTP (Gmail):
-   - As propriedades (props) são configuradas para se conectar ao servidor SMTP do Gmail.
-   - O Gmail utiliza o protocolo SSL na porta 465.
-2. Autenticação:
-   - A autenticação é feita com o endereço de e-mail e senha fornecidos.
-   - Substitua "seuemail@gmail.com" e "suasenha123" pelos seus próprios dados.
-3. Criação da Mensagem:
-   - Uma instância de MimeMessage é criada para compor o e-mail.
-   - O remetente é definido como "seuemail@gmail.com".
-4. Destinatários:
-   - Os destinatários são definidos no array toUser.
-   - Você pode adicionar vários endereços separados por vírgula.
-5. Assunto e Corpo do E-mail:
-   - O assunto do e-mail é definido como "Enviando email com JavaMail".
-   - O corpo do e-mail é definido como "Enviei este email utilizando JavaMail com minha conta GMail!".
-6. Envio do E-mail:
-   - O método Transport.send(message) envia a mensagem criada.
-7. Tratamento de Exceções:
-   - Se ocorrer algum erro durante o envio, uma exceção MessagingException é lançada.
+O objetivo deste projeto é permitir que os usuários enviem e-mails através de uma interface gráfica nativa do Java (JFrame), anexando arquivos conforme necessário. A GUI (interface gráfica do usuário) fornece uma experiência amigável para inserir detalhes do e-mail, como destinatário, remetente, assunto, corpo da mensagem e um arquivo a ser anexado.
 
-***Lembre-se de que, para usar esse código, você precisa ter uma conta no Gmail e permitir o acesso de aplicativos menos seguros nas configurações da sua conta***
+### Tecnologias
+- Java
+- JavaMail API
+- Swing (Para JFrame e JFileChooser)
+- Java AWT (Abstract Window Toolkit)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jvitsilva/JavaMail/main/Images/Captura%20de%20tela%202024-03-03%20155426.png">  
-</p>
+### Como usar
+- Clone o repositório.
+- Rode a aplicação em uma IDE, de preferência o Eclipse.
+- Preencha os campos na GUI e anexe o arquivo desejado.
+- Clique em "Enviar".
+                                                                                                  
+### Ferramenta de desenvolvimento
 
-<p align="center">
-  <img src="https://github.com/jvitsilva/JavaMail/blob/main/Images/Captura%20de%20tela%202024-03-03%20155439.png?raw=true">  
+<p display="inline-block">
+  <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Eclipse-Luna-Logo.svg" alt="vs-logo"/>
 </p>
