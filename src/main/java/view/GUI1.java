@@ -63,12 +63,11 @@ public class GUI1 {
 	 */
 	private void initialize() throws ParseException {
 		frame = new JFrame();
-		frame.setUndecorated(true);
 		frame.setLocationRelativeTo(null);
 		frame.getContentPane().setBackground(new Color(208, 232, 230));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		frame.setSize(587, 424);
+		frame.setSize(587, 445);
 		frame.setLocationRelativeTo(null);  
 		
 

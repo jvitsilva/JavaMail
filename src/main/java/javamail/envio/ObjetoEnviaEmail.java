@@ -1,8 +1,7 @@
 package javamail.envio;
 
-import java.util.ArrayList;
+
 import java.util.Properties;
-import javax.activation.DataHandler;
 import javax.mail.Address;
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -13,14 +12,6 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import javax.mail.util.ByteArrayDataSource;
-
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
 
 public class ObjetoEnviaEmail extends Data{
@@ -76,21 +67,9 @@ public class ObjetoEnviaEmail extends Data{
      * 
      * Retorna um PDF em branco com o texto do parágrafo de exemplo
      */
-     private FileInputStream simuladorDePDF() throws Exception{
-        Document document = new Document();
-        File file = new File("fileanexo.pdf");
-        file.createNewFile();
-        PdfWriter.getInstance(document, new FileOutputStream(file));
-        document.open();
-        document.add(new Paragraph("Conteúdo do PDF anexo"));
-        document.close();
+     
 
-        return new FileInputStream(file);
-     }
-
-
-
-     public void enviarEmailAnexo(Boolean envioHTML) throws Exception {
+     public void enviarAnexo(String caminho) throws Exception {
         
         try{ 
 
@@ -109,46 +88,24 @@ public class ObjetoEnviaEmail extends Data{
         message.setFrom(new InternetAddress(user, sender));
         message.setRecipients(Message.RecipientType.TO, toUser);
         message.setSubject(emailSubject);
-
-       
-       
-        /*Parte 1 do email: descricão e texto do email */
-        MimeBodyPart corpoEmail = new MimeBodyPart();
-
-        if (envioHTML){
-            corpoEmail.setContent(emailContent, "text/html; charset=utf-8");
-        } else{
-            corpoEmail.setText(emailContent);
-        }
-
-
-        ArrayList<FileInputStream> files = new ArrayList<FileInputStream>();
-        files.add(simuladorDePDF());
-        files.add(simuladorDePDF());
-        files.add(simuladorDePDF());
-        files.add(simuladorDePDF());
-
-        Multipart  multipart = new MimeMultipart(); // juntando a parte 1 com a parte 2
-        multipart.addBodyPart(corpoEmail);
         
-        int index = 1;
-        for (FileInputStream fileInputStream : files){
+        MimeBodyPart corpoemail = new MimeBodyPart();
+       
+        corpoemail.setText(emailContent);
+        
+        
+     // Anexo
+        
 
-            
-            /*Parte 2 do email: Anexos */
-            MimeBodyPart anexoEmail = new MimeBodyPart();
-            
-            //Onde é passado o simuladorDePdf você passa o seu arquivo gravado no banco de dados
-            anexoEmail.setDataHandler(new DataHandler(new ByteArrayDataSource(fileInputStream, "applicatin/pdf")));
-            anexoEmail.setFileName("anexo " + index + ".pdf");
-            
-
-            multipart.addBodyPart(anexoEmail);
-            index++;
-        }
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(corpoemail);
+        
+        MimeBodyPart attachmentPart = new MimeBodyPart();
+        attachmentPart.attachFile(caminho);
+        multipart.addBodyPart(attachmentPart);
 
         message.setContent(multipart);
-
+        
         Transport.send(message);
 
             }catch (Exception e){

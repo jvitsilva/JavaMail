@@ -9,7 +9,11 @@ public class Data {
     protected String emailSubject; //Título do email, assunto do email
     protected String emailContent; // conteúdo do email
 
-    public Data(String user, String password, String recipienteList, String sender, String emailSubject, String emailContent){
+    public void setEmailContent(String emailContent) {
+		this.emailContent = emailContent;
+	}
+
+	public Data(String user, String password, String recipienteList, String sender, String emailSubject, String emailContent){
         this.user = user;
         this.password = password;
         this.recipientList = recipienteList;
@@ -18,12 +22,4 @@ public class Data {
         this.emailContent = emailContent;
     }
     
-    /*private String user = "seuemail@gmail.com"; //email
-    private String password = "";
-    private String recipientList = "primeiro@gmail.com, segundo@gmail.com"; //lista de destinatários
-    private String sender = ""; //quem está enviando, remetente
-    private String emailSubject = "Projeto JavaMail"; //Título do email, assunto do email
-    private String emailContent = "Ola programador, voce acaba de receber um email enviado de um projeto de envio de emails desenvolvido por Joao Vitor"; // conteúdo do email
-    */
-
 }
